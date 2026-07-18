@@ -10,6 +10,10 @@ It is a set of skills and domain-specific knowledge that provides context for sk
   `domain-expert-learning` *builds* it. See
   [its README](skills/be-domain-expert/domain-knowledge/README.md).
 
+##  🚧 Note  🚧
+This repository is under active development.
+We are exploring ways to create more condensed context for each domain while developing better, simpler indexing architectures for Markdown files.
+
 ## Linking skills into an agent environment
 
 An agent harness discovers skills by looking in a specific directory. This repo
