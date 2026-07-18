@@ -1,0 +1,29 @@
+# MkDocs build output
+site/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Container images (built from apptainer/*.def — 670M+, do not commit)
+*.sif
+
+# Pipeline outputs
+results/
+
+# Reference data — large, and reproducible from data/<organism>/config.sh
+# via scripts/setup_<organism>_reference.sh. MANIFEST.tsv records provenance.
+data/*/*.fa
+data/*/*.fa.gz
+data/*/*.fa.fai
+data/*/*.gtf
+data/*/*.gtf.gz
+data/*/*.bed
+data/*/index/
+data/*/contaminant_ref/
+data/samples.tsv
+
+# Interrupted downloads (resumable, not source)
+*.part
