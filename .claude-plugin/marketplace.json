@@ -1,0 +1,33 @@
+{
+  "name": "bcbb",
+  "owner": {
+    "name": "Youngjun Park",
+    "url": "https://github.com/Team-yPark"
+  },
+  "description": "Bioinformatics & Computational-biology skills for Claude Code agents.",
+  "version": "0.1.0",
+  "plugins": [
+    {
+      "name": "bcbb-skills",
+      "source": "./skills",
+      "skills": ["./"],
+      "strict": false,
+      "description": "Bioinformatics/computational-biology for biology skill set",
+      "version": "0.1.0",
+      "repository": "https://github.com/Team-yPark/BCbB",
+      "license": "MIT",
+      "category": "science",
+      "keywords": [
+        "bioinformatics",
+        "computational-biology",
+        "rna-seq",
+        "ribo-seq",
+        "scrna-seq",
+        "genomics",
+        "proteomics",
+        "protein-structure",
+        "domain-knowledge"
+      ]
+    }
+  ]
+}
