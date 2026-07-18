@@ -5,8 +5,8 @@ tags: [deconvolution, cibersort, svr, cell-type, bulk, signature-matrix]
 confidence: established
 updated: 2026-07-18
 sources:
-  - Newman et al. 2015, CIBERSORT (Nat Methods 12:453)
-  - Newman et al. 2019, CIBERSORTx (Nat Biotechnol 37:773)
+  - Newman et al. 2015, CIBERSORT (Nat Methods 12:453) — https://cibersort.stanford.edu
+  - Newman et al. 2019, CIBERSORTx (Nat Biotechnol 37:773) — https://cibersortx.stanford.edu
 ---
 
 ## Fact

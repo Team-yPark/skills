@@ -5,7 +5,7 @@ tags: [fastq, gzip, lane-merging, file-formats]
 confidence: established
 updated: 2026-07-18
 sources:
-  - RFC 1952 (GZIP file format) — a gzip file is a series of members
+  - RFC 1952 (GZIP file format) — https://www.rfc-editor.org/rfc/rfc1952 (a gzip file is a series of members)
   - verified empirically, BCbB lane-concatenation test, 2026-07
 ---
 

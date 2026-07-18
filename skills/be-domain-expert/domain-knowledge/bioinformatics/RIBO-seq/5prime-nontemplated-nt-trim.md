@@ -5,8 +5,8 @@ tags: [ribo-seq, small-rna, library-prep, trimming, fastp, artifact]
 confidence: established
 updated: 2026-07-18
 sources:
-  - Stein et al. 2022; Di Fraia et al. 2025 (FASTX-Trimmer -f 2 step)
-  - verified empirically, BCbB Ribo-seq preprocessing (fastp --trim_front1 1), 2026-07
+  - Stein et al. 2022; Di Fraia et al. 2025 (FASTX-Trimmer -f 2 step) — FASTX-Toolkit http://hannonlab.cshl.edu/fastx_toolkit/
+  - verified empirically, BCbB Ribo-seq preprocessing (fastp --trim_front1 1, https://github.com/OpenGene/fastp), 2026-07
 ---
 
 ## Fact

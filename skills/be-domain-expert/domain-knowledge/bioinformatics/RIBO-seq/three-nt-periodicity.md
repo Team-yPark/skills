@@ -6,7 +6,7 @@ confidence: established
 updated: 2026-07-18
 sources:
   - Ingolia et al. 2009, Science 324:218 (PMID 19213877) — original Ribo-seq
-  - Lauria et al. 2018, riboWaltz (PMC6112680)
+  - Lauria et al. 2018, riboWaltz (PMC6112680) — https://github.com/LabTranslationalArchitectomics/riboWaltz
 ---
 
 ## Fact

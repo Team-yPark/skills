@@ -40,10 +40,20 @@ the `domain-expert-learning` skill's concern, not this one.)
 ├── _template.md       # entry template (used by the builder skill)
 ├── validate.py        # consistency check
 ├── biology/  biochemistry/  genetics/  genomics/  proteomics/
-├── bioinformatics/    (RNA-seq/  RIBO-seq/ …)
-├── machine-learning/  (aging-clocks/ …)
+├── bioinformatics/    # + sub-areas: RNA-seq/  RIBO-seq/  scRNA-seq/
+│                      #   root also holds nf-core assay workflows (ChIP/ATAC/
+│                      #   variant/methyl/metagenomics) and cross-assay methods
+├── machine-learning/  # + aging-clocks/
 └── statistics/
 ```
+
+Current coverage (see `INDEX.md` for the full, authoritative list): basic
+biochemistry (protein structure, folding, amino acids, domains); genomics
+reference conventions; proteomics (missingness, LFQ, DEP); Ribo-seq, scRNA-seq, and
+protein-structure prediction (AlphaFold2/3, Boltz, ESMFold, pLDDT/PAE); nf-core
+standard workflows for the main assays; ML methods and aging clocks; and a
+statistics set spanning the ANOVA family, count-model normalization, and common
+pitfalls (pseudoreplication, CV leakage, batch confounding).
 
 ## During the session — check recall on every prompt
 
@@ -56,6 +66,8 @@ yes, **scan `INDEX.md` first** and read the matching entries before proceeding.
 - It applies **continuously**, not just at task start. A mid-session question
   that opens a new topic gets the same check.
 - **Skip** for purely non-domain prompts (unrelated coding, admin, chit-chat).
+- If the retrieved knowledge is questionable for the current task, don't hesitate
+  to pull it back. Visit later again
 
 ## Recall workflow
 

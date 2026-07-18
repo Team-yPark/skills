@@ -14,6 +14,10 @@ files — an entry missing here is invisible to recall.
 ## biochemistry
 
 - [Ribosome footprint length is ~28–30 nt](biochemistry/ribosome-footprint-length.md) — the ribosome protects a discrete ~28–30 nt mRNA fragment; the basis of Ribo-seq and of trim windows [established, 2026-07-18]
+- [The four levels of protein structure](biochemistry/protein-structure-levels.md) — primary→secondary (α-helix/β-sheet)→tertiary (hydrophobic core)→quaternary; function is 3D, not sequence [established, 2026-07-18]
+- [Amino-acid sequence determines native structure (Anfinsen)](biochemistry/sequence-determines-structure.md) — sequence encodes the lowest-free-energy fold; the premise that makes sequence→structure prediction well-posed [established, 2026-07-18]
+- [The 20 amino acids and side-chain properties drive folding](biochemistry/amino-acid-properties.md) — hydrophobic/polar/charged side chains; the hydrophobic effect is the main folding force [established, 2026-07-18]
+- [Protein domains are the modular units of fold and function](biochemistry/protein-domains-modular-units.md) — ~100–250 aa independently folding, reused across proteins; prediction is confident within, uncertain between (PAE) [established, 2026-07-18]
 
 ## genetics
 
@@ -22,14 +26,45 @@ _(none yet)_
 ## genomics
 
 - [Genome sequence-name conventions differ by source](genomics/reference-seqname-conventions.md) — Ensembl `1` vs UCSC `chr1` vs NCBI `NC_…` vs WormBase roman numerals; mismatched FASTA/GTF aligns nothing [established, 2026-07-18]
+- [0-based half-open vs 1-based inclusive genomic coordinates](genomics/genomic-coordinate-conventions.md) — BED/BAM/pysam are 0-based half-open; SAM-text/VCF/GFF/region-strings are 1-based inclusive; convert start−1 [established, 2026-07-18]
 
 ## bioinformatics
 
 - [Concatenating gzipped FASTQs with cat is valid](bioinformatics/fastq-gzip-multimember-concatenation.md) — gzip is multi-member; `cat a.gz b.gz` merges lanes losslessly, no re-compress [established, 2026-07-18]
 - [STAR --genomeSAindexNbases must shrink for small references](bioinformatics/star-genomesaindexnbases-small-genome.md) — default 14 suits mammals; small genome/transcript ref needs `min(14, log2(L)/2-1)` [established, 2026-07-18]
 - [Cross-annotation gene-ID mapping needs a multi-tier fallback](bioinformatics/gene-id-mapping-multitier.md) — direct string match fails for ~half of genes across Ensembl/NCBI/releases; layer symbol → BioMart → gene2ensembl [established, 2026-07-18]
+- [SAM / BAM / CRAM — the alignment formats and their index](bioinformatics/sam-bam-cram-alignment-formats.md) — text/binary/reference-compressed; FLAG/CIGAR/MAPQ; random access needs a sorted+indexed (.bai/.csi) file [established, 2026-07-18]
+- [pysam — Python bindings to htslib for SAM/BAM/VCF/tabix/FASTA](bioinformatics/pysam-htslib-python.md) — AlignmentFile/VariantFile/TabixFile/FastaFile; 0-based API, transient pileups, fetch needs index; docs linked for lookup [established, 2026-07-18]
 - [WGCNA — co-expression modules, eigengenes, and hub genes](bioinformatics/wgcna-coexpression-modules.md) — correlation → soft-threshold (scale-free) → TOM → modules → eigengene (PC1) → hub genes → module-trait [established, 2026-07-18]
 - [Cell-type deconvolution of bulk omics via SVR](bioinformatics/bulk-deconvolution-svr.md) — CIBERSORT-style ν-SVR against a reference signature matrix; bulk change may be composition, not regulation [established, 2026-07-18]
+- [nf-core provides community-standard, reproducible analysis pipelines](bioinformatics/nf-core-standardized-pipelines.md) — versioned, containerized Nextflow workflows; the pipeline for an assay proxies its standard workflow [established, 2026-07-18]
+- [ChIP-seq analysis — align, call peaks, consensus, QC](bioinformatics/chip-seq-analysis.md) — MACS2 peaks vs an input control; narrow (TF) vs broad (histone); FRiP/cross-correlation QC [established, 2026-07-18]
+- [ATAC-seq analysis — chromatin accessibility with the Tn5 shift](bioinformatics/atac-seq-analysis.md) — remove mito reads, Tn5-shift, MACS2 (no control); nucleosome-ladder QC [established, 2026-07-18]
+- [Germline vs somatic variant calling (GATK/sarek)](bioinformatics/germline-somatic-variant-calling.md) — align→MarkDup→BQSR→HaplotypeCaller (germline) or Mutect2 tumour/normal (somatic)→annotate [established, 2026-07-18]
+- [Bisulfite sequencing measures DNA methylation via C→T conversion](bioinformatics/bisulfite-methylation-sequencing.md) — unmethylated C→T; three-letter Bismark alignment; CpG %methylation by context [established, 2026-07-18]
+- [Amplicon (16S) microbiome analysis — ASVs, not OTUs](bioinformatics/amplicon-16s-metagenomics.md) — primer-trim → DADA2 ASVs → SILVA taxonomy → diversity; ASVs supersede 97% OTUs [established, 2026-07-18]
+- [Shotgun metagenomics — assembly and binning into MAGs](bioinformatics/shotgun-metagenomics-mag.md) — reads→profiling (Kraken2) + assembly→binning→MAGs (CheckM/GTDB-Tk); function vs 16S composition [established, 2026-07-18]
+
+### bioinformatics / RNA-seq
+
+- [Splice-aware RNA-seq aligners — STAR, HISAT2, and (deprecated) TopHat](bioinformatics/RNA-seq/rna-seq-aligners-star-hisat2-tophat.md) — RNA-seq needs a splice-aware aligner; STAR (fast, RAM-heavy) vs HISAT2 (low-memory); TopHat is deprecated → HISAT2 [established, 2026-07-18]
+- [Salmon and Kallisto — alignment-free transcript quantification](bioinformatics/RNA-seq/salmon-kallisto-transcript-quantification.md) — pseudo/selective alignment to the transcriptome + EM → TPM/estimated counts; import via tximport, not raw counts [established, 2026-07-18]
+
+### bioinformatics / protein-structure
+
+- [AlphaFold2 predicts structure from an MSA via the Evoformer](bioinformatics/protein-structure/alphafold2-msa-structure-prediction.md) — MSA (coevolution) → Evoformer → 3D coords; CASP14 breakthrough; ColabFold makes it fast [established, 2026-07-18]
+- [Read predicted structures through pLDDT and PAE](bioinformatics/protein-structure/structure-confidence-plddt-pae.md) — pLDDT per-residue folded-ness (>90 high, <50 disordered); PAE inter-domain/chain arrangement; ipTM for interfaces [established, 2026-07-18]
+- [AlphaFold3 and Boltz — diffusion models for biomolecular complexes](bioinformatics/protein-structure/alphafold3-boltz-biomolecular-complexes.md) — diffusion decoder; proteins + DNA/RNA/ligands/ions; Boltz is the open AF3-class alternative [established, 2026-07-18]
+- [ESMFold — single-sequence structure from a protein language model](bioinformatics/protein-structure/esmfold-protein-language-models.md) — ESM-2 embeddings, no MSA, ~10× faster; better on orphan/designed proteins, slightly lower accuracy [established, 2026-07-18]
+- [MSA depth and coevolution drive prediction accuracy](bioinformatics/protein-structure/msa-coevolution-structure-signal.md) — deep diverse MSA → high confidence; orphan/designed/fast-evolving → shallow MSA → low confidence [established, 2026-07-18]
+- [What a predicted structure is not — one static model](bioinformatics/protein-structure/predicted-structure-caveats.md) — no dynamics/ensembles, not the bound state, not function/mutation-effect; high confidence can still be wrong [established, 2026-07-18]
+
+### bioinformatics / scRNA-seq
+
+- [Single-cell RNA-seq quantification — barcodes, UMIs, empty droplets](bioinformatics/scRNA-seq/single-cell-rnaseq-quantification.md) — overview: map → correct barcodes → resolve UMIs → cell×gene matrix; emptyDrops vs knee [established, 2026-07-18]
+- [scRNA-seq mapping — reference type sets what you can measure](bioinformatics/scRNA-seq/scrna-mapping-reference-choice.md) — genome (introns, snRNA/velocity) vs transcriptome (fast) vs augmented/decoy-aware; pseudo- vs selective vs full alignment [established, 2026-07-18]
+- [scRNA-seq cell-barcode correction against a permit list](bioinformatics/scRNA-seq/scrna-barcode-correction.md) — correct to a 10x whitelist or knee-derived list; ~81% of 1-error 10x-v3 barcodes are ambiguous; base quality matters [established, 2026-07-18]
+- [scRNA-seq UMI resolution — collapse duplicates, but not naively](bioinformatics/scRNA-seq/scrna-umi-resolution.md) — edit-distance (θ=1) collapse for UMI errors; EM for multi-gene UMIs; counts are tool-dependent [established, 2026-07-18]
 
 ### bioinformatics / RIBO-seq
 

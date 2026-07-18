@@ -5,7 +5,7 @@ tags: [gene-id, mapping, orthology, ensembl, ncbi, biomart, annotation]
 confidence: established
 updated: 2026-07-18
 sources:
-  - Ensembl BioMart; NCBI gene2ensembl
+  - Ensembl BioMart (https://www.ensembl.org/biomart); NCBI gene2ensembl; pybiomart https://github.com/jrderuiter/pybiomart; mygene https://github.com/biothings/mygene.py
   - verified empirically, killifish Ensembl↔NCBI mapping (~52% recovered), 2026-07
 ---
 

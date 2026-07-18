@@ -6,6 +6,8 @@ confidence: <established | emerging | contested>
 updated: <YYYY-MM-DD>
 sources:
   - <citation, URL, or "verified empirically, <where>, <date>">
+  # bioinformatics entries: also link the tool's GitHub repo / library homepage,
+  # e.g. "Dobin et al. 2013, STAR (Bioinformatics 29:15) — https://github.com/alexdobin/STAR"
 ---
 
 ## Fact

@@ -5,8 +5,8 @@ tags: [ribo-seq, rna-seq, translation-efficiency, deltate, anota2seq, integratio
 confidence: established
 updated: 2026-07-18
 sources:
-  - Chothani et al. 2019, deltaTE (Curr Protoc Mol Biol; DESeq2 interaction model)
-  - anota2seq (Oertlin et al. 2019); riboWaltz/Ribo-seq TE convention
+  - Chothani et al. 2019, deltaTE (Curr Protoc Mol Biol; DESeq2 interaction model) — https://github.com/SGDDNB/translational_regulation
+  - anota2seq (Oertlin et al. 2019) — https://bioconductor.org/packages/anota2seq; riboWaltz/Ribo-seq TE convention
 ---
 
 ## Fact

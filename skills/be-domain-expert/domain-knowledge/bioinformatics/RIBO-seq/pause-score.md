@@ -5,7 +5,7 @@ tags: [ribo-seq, pause, codon, elongation, stalling]
 confidence: established
 updated: 2026-07-18
 sources:
-  - Ingolia et al. 2011; general Ribo-seq pause-site literature
+  - Ingolia et al. 2011; general Ribo-seq pause-site literature — riboWaltz https://github.com/LabTranslationalArchitectomics/riboWaltz
   - verified empirically, BCbB pause-score analysis, 2026-07
 ---
 

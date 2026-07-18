@@ -5,7 +5,7 @@ tags: [star, indexing, genome-size, alignment, memory]
 confidence: established
 updated: 2026-07-18
 sources:
-  - STAR manual (alexdobin/STAR), genomeGenerate / --genomeSAindexNbases
+  - STAR manual, genomeGenerate / --genomeSAindexNbases — https://github.com/alexdobin/STAR
   - verified empirically, BCbB worm setup (100 Mb → 12), 2026-07
 ---
 

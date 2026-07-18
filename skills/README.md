@@ -42,6 +42,7 @@ the "Linking skills into an agent environment" section of the repo-root
 |---|---|---|
 | `seq-download-preprocess` | Writing or debugging sequencing download + preprocessing scripts (SRA/GEO → trim → contaminant filter → align → BAM) | `reference.md`, `nf-core.md`, `assets/` (lib/common.sh baseline, pipeline template, synthetic-test-organism generator) |
 | `organism-reference-setup` | Acquiring organism reference data (genome/GTF) from Ensembl/UCSC/NCBI/GENCODE, building indexes, wiring paths into `lib/common.sh` | `reference.md` |
+| `protein-structure-prediction` | Predicting/analyzing protein 3D structure from sequence — model choice (AlphaFold2/ColabFold, AlphaFold3, Boltz, ESMFold), running, and pLDDT/PAE interpretation | `reference.md` |
 | `be-domain-expert` | **Consulting** the domain-knowledge base while doing any domain task — recall what's known before answering (the default every-session reflex). Owns the base. | `reference.md`, `domain-knowledge/` (the base itself) |
 | `domain-expert-learning` | **Building** the base — research a durable fact, distil it, record a sourced entry. Writes into `be-domain-expert`'s base. | `reference.md` |
 
@@ -53,6 +54,18 @@ touches a domain topic); `domain-expert-learning` writes to it. The base is
 skill on install; the builder writes to it via the sibling path
 `../be-domain-expert/domain-knowledge/`. Routing rule: if a task is to *build/record*
 knowledge use `domain-expert-learning`, otherwise use `be-domain-expert`.
+
+**The base currently covers** (see `domain-knowledge/INDEX.md` for the live list):
+genomics reference conventions; **biochemistry** (protein structure levels,
+Anfinsen, amino acids, domains); proteomics (missingness, LFQ, differential
+expression); bioinformatics assay workflows — RNA-seq, **Ribo-seq** (periodicity,
+P-site, CDS alignment), **scRNA-seq** (mapping, cell-barcode/UMI resolution,
+quantification), **protein-structure prediction** (AlphaFold2/3, Boltz, ESMFold,
+pLDDT/PAE), and the **nf-core standard pipelines** (ChIP-seq, ATAC-seq, variant
+calling, bisulfite methylation, amplicon 16S / shotgun metagenomics); machine-
+learning methods and **aging clocks**; and a statistics set spanning the **ANOVA
+family**, count-model normalization, and common pitfalls (pseudoreplication,
+cross-validation leakage, batch confounding).
 
 ## Creating a skill
 

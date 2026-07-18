@@ -5,7 +5,7 @@ tags: [ribo-seq, alignment, star, cds, multimapping, isoforms]
 confidence: established
 updated: 2026-07-18
 sources:
-  - Stein et al. 2022; Di Fraia et al. 2025 (CDS-library Bowtie v1 strategy)
+  - Stein et al. 2022; Di Fraia et al. 2025 (CDS-library Bowtie v1 strategy) — Bowtie https://github.com/BenLangmead/bowtie
   - verified empirically, BCbB Ribo-seq preprocessing, 2026-07
 ---
 

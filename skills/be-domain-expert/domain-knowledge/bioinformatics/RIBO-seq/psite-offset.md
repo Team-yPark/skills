@@ -5,7 +5,7 @@ tags: [ribo-seq, p-site, offset, codon-resolution]
 confidence: established
 updated: 2026-07-18
 sources:
-  - Lauria et al. 2018, riboWaltz (PMC6112680)
+  - Lauria et al. 2018, riboWaltz (PMC6112680) — https://github.com/LabTranslationalArchitectomics/riboWaltz
   - Ingolia et al. 2009 (PMID 19213877); Weinberg et al. 2016
 ---
 

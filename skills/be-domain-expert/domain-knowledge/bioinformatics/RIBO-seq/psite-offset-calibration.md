@@ -5,7 +5,7 @@ tags: [ribo-seq, p-site, calibration, metagene, ribowaltz]
 confidence: established
 updated: 2026-07-18
 sources:
-  - Lauria et al. 2018, riboWaltz (PMC6112680)
+  - Lauria et al. 2018, riboWaltz (PMC6112680) — https://github.com/LabTranslationalArchitectomics/riboWaltz
   - Xiao et al. 2019, integer-programming A/P-site (PMC6472398)
 ---
 

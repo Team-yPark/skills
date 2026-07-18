@@ -6,7 +6,7 @@ confidence: established
 updated: 2026-07-18
 sources:
   - Zhang & Horvath 2005 (Stat Appl Genet Mol Biol 4:17) — soft-threshold / scale-free
-  - Langfelder & Horvath 2008, WGCNA (BMC Bioinformatics 9:559)
+  - Langfelder & Horvath 2008, WGCNA (BMC Bioinformatics 9:559) — https://cran.r-project.org/package=WGCNA
 ---
 
 ## Fact

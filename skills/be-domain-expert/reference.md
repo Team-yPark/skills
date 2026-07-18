@@ -23,12 +23,23 @@ task, and what each area holds.
 | `genetics` | inheritance, variation, regulation | — |
 | `genomics` | genome structure, references, annotation | seqname conventions across sources |
 | `proteomics` | MS proteomics data + methods | MNAR imputation; LFQ log2; DEP |
-| `bioinformatics` | tools, formats, algorithms, parameters | STAR flags; WGCNA; deconvolution; RNA-seq/RIBO-seq sub-areas |
+| `bioinformatics` | tools, formats, algorithms, assay workflows | STAR flags; WGCNA; deconvolution; gene-ID mapping; nf-core assay pipelines; RNA-seq / RIBO-seq / scRNA-seq sub-areas |
 | `machine-learning` | models + ML methodology | autoencoders; adversarial invariance; CV leakage; aging-clocks |
-| `statistics` | analysis methods | ANOVA family; DESeq2/limma; batch correction; pseudoreplication |
+| `statistics` | analysis methods | ANOVA family; DESeq2/limma; batch correction; pseudoreplication; robust trends |
 
-Areas nest (e.g. `bioinformatics/RIBO-seq/`, `machine-learning/aging-clocks/`);
-the top-level directory is the entry's `area`.
+Areas nest; the top-level directory is the entry's `area`. Current sub-areas:
+
+- **`bioinformatics/RNA-seq`, `/RIBO-seq`, `/scRNA-seq`, `/protein-structure`** —
+  assay/method depth (Ribo-seq: periodicity, P-site, CDS alignment; scRNA-seq:
+  mapping, barcode correction, UMI resolution; protein-structure: AlphaFold2/3,
+  Boltz, ESMFold, pLDDT/PAE, MSA depth, limitations).
+- **`bioinformatics/`** (root) also holds cross-assay method entries and the
+  **nf-core standard workflows** — ChIP-seq, ATAC-seq, variant calling (sarek),
+  bisulfite/methylation, amplicon (16S) and shotgun metagenomics.
+- **`machine-learning/aging-clocks`** — transcriptomic/PC/elastic-net/BayesAge
+  clocks, batch-transfer.
+
+`INDEX.md` is the authoritative, always-current list — this table is orientation.
 
 ## Reading an entry
 
