@@ -1,5 +1,9 @@
 # Skills For Computational Biologist
+## 🚧 Note  🚧
+This repository is under active development.
+We are exploring ways to create more condensed context for each domain while developing better, simpler indexing architectures for Markdown files.
 
+## BCbB : Bioinformatics & Computational biology for biologist
 It is a set of skills and domain-specific knowledge that provides context for skill usage.
 
 - **`skills/`** — agent skills for computational-biology tasks. See
@@ -10,15 +14,20 @@ It is a set of skills and domain-specific knowledge that provides context for sk
   `domain-expert-learning` *builds* it. See
   [its README](skills/be-domain-expert/domain-knowledge/README.md).
 
-##  🚧 Note  🚧
-This repository is under active development.
-We are exploring ways to create more condensed context for each domain while developing better, simpler indexing architectures for Markdown files.
 
 ## Linking skills into an agent environment
 
 An agent harness discovers skills by looking in a specific directory. This repo
 supports two ways to expose `skills/` to one, at two different scopes.
 
+## Install as a Claude 
+Inside Claude Code:
+```
+/plugin marketplace add Team-yPark/BCbB
+/plugin install bcbb-skills
+
+/bcbb-skills:be-domain-expert
+```
 ### Every project (global install)
 
 To make these skills available in **all** projects — and to other harnesses —
@@ -30,3 +39,4 @@ scripts/link_skills.sh
 #   ~/.claude/skills/<skill>  → <repo>/skills/<skill>   (Claude Code)
 #   ~/.agents/skills/<skill>  → <repo>/skills/<skill>   (Codex / Agent-Skills harnesses)
 ```
+
